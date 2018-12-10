@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');
+const {config} = require('../config');
 
 exports.initConnection = initConnection;
-const db = {
-    name: 'Atks',
-    port: 27017,
-    host: 'localhost'
-}
+
 
 function initConnection() {
 
-    let dbUrl = `mongodb://${ db.host }:${ db.port }/${ db.name }`;
+    let dbUrl = `mongodb://${ config.db.host }:${ config.db.port }/${ config.db.name }`;
 
     return new Promise((resolve, reject) => {
         connectToMongo();
