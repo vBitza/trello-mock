@@ -63,7 +63,7 @@ function createNewBoard() {
     xhttp.send(JSON.stringify(board));
 
     toggleModal();
-    location.reload();
+    window.location.reload();
 }
 
 function getBoards() {
