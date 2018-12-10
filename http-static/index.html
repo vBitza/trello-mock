@@ -1,0 +1,101 @@
+ <html>
+    <head>
+        <title>Atks</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/modal.css">
+        <script src="/scripts/user.js"></script>
+        <script src="/scripts/functions.js"></script>
+        <script src="/scripts/index.js"></script>
+    </head>
+
+    <body>
+        <div id="surface">
+            <div id="header">
+                <div class="header-right-bar">
+                    <a class="header-user-icon" onclick="logout()">
+                        <span class="user-initials">Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="sticky-container">
+
+                <div class="sticky-menu">
+                    <nav class="menu-sidebar-container">
+
+                            <ul class="sidebar-items">
+                                <li class="sidebar-item">
+                                    <span class="item-container active-item"><span class="text-span">Boards</span></span>
+
+                                </li>
+                                <li class="sidebar-item">
+                                    <span class="item-container" onclick="goToTeams()">Teams</span>
+                                </li>
+                            </ul>
+
+                    </nav>
+                </div>
+
+                <div class="boards">
+                    <div class="boards-sticky-container">
+                        <div class="boards-header">
+                            <h3>Boards</h3>
+                            <ul class="boards-list" id="boards-list">
+                                <li class="board-item board-new" onclick="loadTeams()">
+                                    <a class="board-tile-new" id="trigger" onclick="toggleModal()">
+                                        <div class="board-header">
+                                            Create new board...
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="toggleModal()">&times;</span>
+            <h1>Create new board</h1>
+
+            <form class="modal-form">
+                <ul>
+                    <li>
+                        <label for="name">Board Name</label>
+                        <input type="text" name="name" id="form.name" maxlength="100">
+                    </li>
+                    <li>
+                        <label for="type">Board Type</label>
+                        <select id="form.type" name="type" onchange="checkType(this)">
+                            <option value="" selected disabled hidden>Choose type</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Team">Team</option>
+                        </select>
+                     </li>
+                     <li id="team" style="display: none">
+                        <label for="team">Board Team</label>
+                        <select id="form.team" name="team">
+                            <option value="" selected disabled hidden>Choose a team</option>
+                        </select>
+                     </li>
+                </ul>
+                <input type="button" onclick="createNewBoard()" value="Create new board">
+            </form>
+        </div>
+    </div>
+
+
+
+    </body>
+</html>

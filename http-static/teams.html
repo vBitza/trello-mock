@@ -1,0 +1,86 @@
+ <html>
+    <head>
+        <title>Atks</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/modal.css">
+        <script src="/scripts/user.js"></script>
+        <script src="/scripts/functions.js"></script>
+        <script src="/scripts/teams.js"></script>
+    </head>
+
+    <body>
+        <div id="surface">
+            <div id="header">
+                <div class="header-right-bar">
+                    <a class="header-user-icon" onclick="logout()">
+                        <span class="user-initials">Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="sticky-container">
+
+                <div class="sticky-menu">
+                    <nav class="menu-sidebar-container">
+
+                            <ul class="sidebar-items">
+                                <li class="sidebar-item">
+                                    <span class="item-container" onclick="goToBoards()"><span class="text-span">Boards</span></span>
+
+                                </li>
+                                <li class="sidebar-item">
+                                    <span class="item-container active-item">Teams</span>
+                                </li>
+                            </ul>
+
+                    </nav>
+                </div>
+
+                <div class="boards">
+                    <div class="boards-sticky-container">
+                        <div class="boards-header">
+                            <h3>Teams</h3>
+                                <ul class="boards-list" id="boards-list">
+                                    <li class="board-item board-new">
+                                    <a class="board-tile-new" id="trigger" onclick="toggleModal()">
+                                    <div class="board-header">
+                                            Create new team...
+                                    </div>
+                                    </a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="toggleModal()">&times;</span>
+            <h1 id="modal-title">Create new team</h1>
+
+            <form class="modal-form">
+                <ul>
+                    <li>
+                        <label for="name">Team Name</label>
+                        <input type="text" name="name" id="form.name" maxlength="100">
+                    </li>
+<!--                     <li>
+                        <label for="members">Members</label>
+                    </li> -->
+                </ul>
+                <input type="button" onclick="createNewTeam()" value="Create new team">
+            </form>
+        </div>
+    </div>
+
+
+    </body>
+</html>

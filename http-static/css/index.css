@@ -1,0 +1,218 @@
+
+body {
+    display: block;
+    z-index: 0;
+    background-color: #B04632;
+    margin: 0px;
+    overflow: hidden;
+    height: 100%;
+},
+content {
+    position: relative;
+}, html, button, input, select, textarea, span, li, ul {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#surface {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    flex: none;
+    height: 32px;
+    position: relative;
+    background: #6E2F1A;
+    overflow: hidden;
+    padding: 4px;
+    z-index: 10;
+}
+
+.header-right-bar {
+    position: absolute;
+    top: 4px;
+    right: 0;
+}
+
+.header-user-icon {
+    transition: 1s;
+    border-radius: 25em;
+    background-color: #d9dadb;
+    display: block;
+    float: left;
+    font-weight: 700;
+    margin-right: 4px;
+    min-width: 32px;
+    line-height: 32px;
+    height: 32px;
+    padding: 0;
+}
+
+.header-user-icon:hover {
+    background-color: #B04632;
+    cursor: pointer;
+}
+
+.user-initials {
+    color: black;
+    display: block;
+    font-size: 12px;
+    height: 32px;
+    text-align: center;
+    top: 0px;
+    width: 100%;
+}
+
+.user-initials:hover {
+    transition: 1s;
+    color: white;
+}
+
+#content {
+    flex-grow: 1;
+    overflow-y: auto;
+    outline: none;
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+.sticky-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sticky-menu {
+    overflow: hidden;
+    width:100px;
+    position: sticky;
+    top: 0px;
+}
+
+.menu-sidebar-container {
+    overflow: hidden;
+    margin-top: 40px;
+    max-width: 210px;
+}
+
+.sidebar-items {
+    overflow: hidden;
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+    margin-top:10px;
+    padding: 0px;
+}
+
+.sidebar-item {
+    overflow: hidden;
+    margin: 10px;
+    line-height: 25px;
+}
+
+
+.item-container {
+    overflow: hidden;
+    display: block;
+    padding: 3px;
+    max-width:100%;
+    text-align: center;
+}
+
+.item-container:hover {
+    color: white;
+    display: block;
+    padding: 3px;
+    max-width: 100%;
+    border-radius: 50px;
+    background-color: #a81515;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.text-span {
+    overflow: hidden;
+    max-width: 80%;
+    flex: 1 1 auto;
+}
+
+.active-item {
+    overflow: hidden;
+    border-radius: 50px;
+    color: white !important;
+    background-color: #a81515 !important;
+}
+
+.boards {
+    overflow: hidden;
+    width: 860px;
+    margin-top: 40px;
+}
+
+.boards-sticky-container {
+    position: sticky;
+    top: 0px;
+}
+
+.boards-header {
+    margin: 0 0 0 40px;
+    position: relative;
+}
+
+.boards-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.board-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+    margin: 5px;
+    padding: 5px;
+    width: 20%;
+}
+
+.board-tile {
+    border-color: white;
+    border-style: inset;
+    height: 80px;
+    background-color: #CC4632;
+    border-radius: 3px;
+    display: block;
+    background-size: cover;
+}
+
+.board-header {
+    overflow: hidden;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.board-item:hover {
+    cursor: pointer;
+    color: white;
+}
+.board-tile-new {
+    overflow: hidden;
+    padding-left: 5px;
+    line-height:60px;
+    height: 80px;
+    background-color: #97a7b0;
+    border-radius: 3px;
+    display: block;
+    background-size: cover;
+}
+
+
+
+

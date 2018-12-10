@@ -1,0 +1,151 @@
+ <html>
+    <head>
+        <title>Trello Project</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/dashboard.css">
+        <link rel="stylesheet" href="../css/modal.css">
+        <script src="/scripts/user.js"></script>
+        <script src="/scripts/dashboard.js"></script>
+        <script src="/scripts/functions.js"></script>
+    </head>
+
+  <body>
+        <div id="surface">
+            <div id="header">
+                <div class="header-right-bar">
+                    <a class="header-user-icon" onclick="logout()">
+                        <span class="user-initials">Logout</span>
+                    </a>
+                </div>
+                <div class="header-left-bar">
+                    <a class="header-user-icon">
+                        <span class="user-initials" onclick="goToBoards()">Boards</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="board-header">
+
+                <h3 class="board-header-item" id="board-name"></h3>
+
+                <span class="board-header-item board-header-divider">
+                </span>
+
+                <h3 class="board-header-item" id="board-type"></h3>
+
+                <span class="board-header-item board-header-divider">
+                </span>
+
+                <div class="board-header-input">
+                    <input type="text" placeholder="Add member" id="email">
+                    <input type="button" value="Add" onclick="addUserToBoard()">
+                </div>
+
+
+                <span class="board-header-item board-header-divider">
+                </span>
+
+                <div>
+                    <input type="button" value="Create new task" onclick="toggleTaskModal()" class="header-button">
+                </div>
+
+                <span class="board-header-item board-header-divider">
+                </span>
+
+                <div>
+                    <input type="button" value="Delete Board"  onclick="toggleDialogModal()" class="header-button">
+                </div>
+        </div>
+
+        <div id="content">
+            <div class="sticky-container">
+
+                <div class="sticky-list">
+                    <div class="list-content" id="Open">
+                        <div class="list-header">
+                            <p>Open</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sticky-list">
+                    <div class="list-content"  id="In Progress">
+                        <div class="list-header">
+                            <p>In Progress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sticky-list">
+                    <div class="list-content" id="Fixed">
+                        <div class="list-header">
+                            <p>Fixed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sticky-list">
+                    <div class="list-content" id="Closed">
+                        <div class="list-header">
+                            <p>Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="toggleModal()">&times;</span>
+            <h1 id="modal-title">Create new task</h1>
+
+            <form class="modal-form" id="modal-form">
+                <li>
+                    <label for="name">Task name</label>
+                    <input type="text" name="name" id="form.name" maxlength="100">
+                </li>
+
+                <li>
+                    <label for="status">Status</label>
+                    <select id="form.status" name="status">
+                        <option value="" selected disabled hidden>Choose status</option>
+                        <option value="Open">Open</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Fixed">Fixed</option>
+                        <option value="Closed">Closed</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label for="description">Task description</label>
+                    <textarea type=text id="form.description" maxlenght="250" row="4" cols="50"></textarea>
+                </li>
+
+                <input id="modal-button" type="button" onclick="saveTask()" value="Save">
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="dialog-modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="toggleDialogModal()">&times;</span>
+            <h3>Delete board</h3>
+            <p>Are you sure you want to delete this board? All of the content will be lost.</p>
+            <div style="display: flex; justify-content: center">
+            <input type="button" value="Confirm"  onclick="deleteBoard()" class="header-button">
+        </div>
+        </div>
+    </div>
+
+
+</body >
+</html>

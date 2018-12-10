@@ -1,0 +1,22 @@
+{
+  "name": "atks-server",
+  "version": "0.0.1",
+  "description": "Proiect WebToLearn - Laborator Tehnici Web",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabi Onea",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "email-validator": "^2.0.4",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.12"
+  }
+}

@@ -1,0 +1,227 @@
+
+body {
+    display: block;
+    z-index: 0;
+    background-color: #B04632;
+    margin: 0px;
+    overflow: hidden;
+    height: 100%;
+},
+content {
+    position: relative;
+}, html, button, input, select, textarea, span, li, ul {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#surface {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    flex: none;
+    height: 32px;
+    position: relative;
+    background: #6E2F1A;
+    overflow: hidden;
+    padding: 4px;
+    z-index: 10;
+}
+
+.header-right-bar {
+    position: absolute;
+    top: 4px;
+    right: 0;
+}
+
+.header-left-bar {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+}
+
+.header-user-icon {
+    transition: 1s;
+    border-radius: 25em;
+    background-color: #d9dadb;
+    display: block;
+    float: left;
+    font-weight: 700;
+    margin-right: 4px;
+    min-width: 32px;
+    line-height: 32px;
+    height: 32px;
+    padding: 0;
+}
+
+.header-user-icon:hover {
+    background-color: #B04632;
+    cursor: pointer;
+}
+
+.user-initials {
+    color: black;
+    display: block;
+    font-size: 12px;
+    height: 32px;
+    text-align: center;
+    top: 0px;
+    width: 100%;
+}
+
+.user-initials:hover {
+    transition: 1s;
+    color: white;
+}
+
+#content {
+    flex-grow: 1;
+    overflow-y: auto;
+    outline: none;
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+.board-header {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 30px;
+    padding: 8px 4px 8px 8px;
+    position: relative;
+    color: white;
+    align-items: center;
+}
+
+.board-header-item {
+    margin: 5px;
+}
+
+.board-header-divider {
+    float: left;
+    border-left: 1.5px solid white;
+    height: 18px;
+}
+
+.board-header-input {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    background-color: white;
+    border-radius: 5em;
+}
+
+.board-header-input input[type="text"] {
+    overflow: hidden;
+    border-radius: 10em;
+    padding: 0px;
+    width: 80%;
+    height: 90%;
+    border: none;
+    margin: 3px;
+    border-color: white;
+    background-color: white;
+    outline: none;
+
+}
+
+.board-header-input input[type="button"] {
+    height: 100%;
+    border-radius: 1em;
+    background-color: #f7f7f7;
+    border-style: line;
+    border-color: #cecece;
+    outline: none;
+}
+
+.board-header-input input[type="text"]:focus {
+    border: none;
+    border-color: white;
+
+}
+
+.header-button {
+    margin-left: 5px;
+    height: 100%;
+    background-color: #f7f7f7;
+    border-radius: 5em;
+    border-style: none;
+    outline: none;
+    border-color: white;
+}
+
+.header-button:hover {
+    background-color: #dfe3e6;
+    cursor: pointer;
+}
+
+.sticky-container {
+    overflow-wrap: normal;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sticky-list {
+    width: 25%;
+    margin: 0 4px;
+    height: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.list-content {
+    overflow-x: hidden;
+    background-color: #dfe3e6;
+    border-radius:  3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 90%;
+    position: relative;
+    white-space: normal;
+}
+
+.list-header {
+    margin-left: 10px;
+    font-style: bold;
+}
+
+
+.list-item {
+    padding: 5px;
+    background-color: white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    min-height: 100px;
+    max-height: 200px;
+    overflow-x: hidden;
+    box-shadow: 2px 2px #b5b5b5;
+}
+
+.list-item:hover {
+    cursor: pointer;
+    background-color: #cccccc;
+}
+
+.item-header {
+    font-style: bold;
+}
+
+.item-content {
+    margin-top: 5px;
+    padding: 3px;
+    font-size: 0.8em;
+}
